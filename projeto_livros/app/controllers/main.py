@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from sqlalchemy.orm import Session
 from app.models.database import SessionLocal, Livro, init_db
 from pydantic import BaseModel

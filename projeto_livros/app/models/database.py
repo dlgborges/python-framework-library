@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 SQLALCHEMY_DATABASE_URL = 'postgresql://neondb_owner:npg_H8A3EWyBeObw@ep-damp-grass-acv8i0ba-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
 
 if SQLALCHEMY_DATABASE_URL.startswith('postgres://'):
-    SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace("postgres://",'postgresql://')
+    SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace("postgres://",'postgresql://', 1)
 
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)

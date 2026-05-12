@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 
-SQLALCHEMY_DATABASE_URL = 'postgresql://neondb_owner:DB_PASSWORD@ep-damp-grass-acv8i0ba-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
+SQLALCHEMY_DATABASE_URL = f'postgresql://neondb_owner:{DB_PASSWORD}@ep-damp-grass-acv8i0ba-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require'
 
 if SQLALCHEMY_DATABASE_URL.startswith('postgres://'):
     SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace("postgres://",'postgresql://', 1)
